@@ -11,23 +11,17 @@ public class StringUtils {
     public void byLength(String[] strArray) {
 
 
-        doSort(strArray, (o1, o2) -> {
-            return (o1.length() - o2.length());
-        });
+        doSort(strArray, (o1, o2) -> (o1.length() - o2.length()));
     }
 
     public void byReverseLength(String[] strArray) {
 
-        doSort(strArray, (o1, o2) -> {
-            return (o2.length() - o1.length());
-        });
+        doSort(strArray, (o1, o2) -> (o2.length() - o1.length()));
     }
 
     public void byFirstCharacter(String[] strArray) {
 
-        doSort(strArray, (o1, o2) -> {
-            return o1.charAt(0) - o2.charAt(0);
-        });
+        doSort(strArray, (o1, o2) -> o1.charAt(0) - o2.charAt(0));
     }
 
     public void byLetterE(String[] strArray) {
@@ -49,7 +43,7 @@ public class StringUtils {
 
     public void byEChecker(String[] strArray) {
 
-        doSort(strArray, (s1, s2) -> StringUtilsHelper.eChecker(s1, s2));
+        doSort(strArray, StringUtilsHelper::eChecker);
     }
 
 
